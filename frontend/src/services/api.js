@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Use absolute URL for development
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://mansaathi-backend.vercel.app/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -46,13 +46,19 @@ api.interceptors.response.use(
   }
 );
 
-// Test connection function
+// Test connection function - FIX THIS
 export const testConnection = async () => {
   try {
-    const response = await api.get('/test');
-    return response.data;
+    // Try a public endpoint that doesn't require auth
+    const response = await api.get('/auth/profile');
+    return { status: 'Backend connected', data: response.data };
   } catch (error) {
-    throw new Error('Backend connection failed');
+    // If we get ANY response, backend is connected but endpoint requires auth
+    if (error.response) {
+      return { status: 'Backend connected but auth required' };
+    }
+    // No response means backend is really down
+    throw new Error('Backend connection failed - server not responding');
   }
 };
 

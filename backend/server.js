@@ -12,7 +12,10 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin:[
+  'https://effervescent-flan-0d168f.netlify.app',
+  'http://localhost:3000',
+  ],
   credentials: true
 }));
 
@@ -330,9 +333,10 @@ app.get('/api/mood/history', (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
   console.log(`🔗 Test backend: http://localhost:${PORT}/api/test`);
   console.log(`📊 Registered users: ${users.length}`);
 });
+module.exports = app;
