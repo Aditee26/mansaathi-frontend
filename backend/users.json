@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1764257134004",
+    "username": "Aditee",
+    "email": "aditeesingh001@gmail.com",
+    "password": "$2a$10$bmI.SrGY/WE4u.rf9p61cuNdeyO9CkfonGaP1F5yAwlZYSHtH.zI2",
+    "profile": {
+      "firstName": "Aditee",
+      "lastName": "Singh",
+      "goals": []
+    },
+    "createdAt": "2025-11-27T15:25:34.004Z",
+    "moodEntries": [
+      {
+        "id": "1764259542919",
+        "mood": "angry",
+        "intensity": 8,
+        "factors": [],
+        "notes": "for this working laptop",
+        "timestamp": "2025-11-27T16:05:42.919Z"
+      },
+      {
+        "id": "1764257290460",
+        "mood": "angry",
+        "intensity": 5,
+        "factors": [],
+        "notes": "",
+        "timestamp": "2025-11-27T15:28:10.460Z"
+      },
+      {
+        "id": "1764257190631",
+        "mood": "angry",
+        "intensity": 5,
+        "factors": [],
+        "notes": "",
+        "timestamp": "2025-11-27T15:26:30.631Z"
+      },
+      {
+        "id": "1764257185750",
+        "mood": "angry",
+        "intensity": 5,
+        "factors": [],
+        "notes": "",
+        "timestamp": "2025-11-27T15:26:25.750Z"
+      }
+    ],
+    "journalEntries": [],
+    "meditationSessions": []
+  }
+]
