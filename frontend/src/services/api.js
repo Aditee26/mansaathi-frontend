@@ -46,19 +46,13 @@ api.interceptors.response.use(
   }
 );
 
-// Test connection function - FIX THIS
+// Test connection function
 export const testConnection = async () => {
   try {
-    // Try a public endpoint that doesn't require auth
-    const response = await api.get('/auth/profile');
-    return { status: 'Backend connected', data: response.data };
+    const response = await api.get('/test');
+    return response.data;
   } catch (error) {
-    // If we get ANY response, backend is connected but endpoint requires auth
-    if (error.response) {
-      return { status: 'Backend connected but auth required' };
-    }
-    // No response means backend is really down
-    throw new Error('Backend connection failed - server not responding');
+    throw new Error('Backend connection failed');
   }
 };
 
